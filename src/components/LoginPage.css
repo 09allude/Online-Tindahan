@@ -1,0 +1,42 @@
+.LogIn_Mainframe {
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(236, 62, 39);
+}
+
+.Logo {
+    width: 25%;
+    height: 45vh;
+    display: flex;
+    left: 10rem;
+}
+
+.Login_Form {
+    border: 5px solid white;
+    display: flex;
+}
+.Login_Form_Data {
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: 20rem;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(42, 228, 42, 0.219);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin: 10px;
+}
