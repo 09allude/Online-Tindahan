@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import "../components/LoginPage.css";
 
 import Logo from "../assets/grad_pic_3.png";
-
-
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-
+  const navigate = useNavigate();
   const adminUser = {
     email: "admin@admin.com",
     password: "admin123"
@@ -25,9 +24,12 @@ const LoginPage = () => {
         setUser({
           name: details.name,
           email: details.email
-        })
+        });
+      
+      navigate("/dashboard");
     } else {
       console.log("Details do not match!")
+      setError("Details do not match!!")
     }
   }
 
@@ -39,6 +41,7 @@ const LoginPage = () => {
         <img src={Logo} className="Logo" alt="logo" />
         <div className="Login_Form_Data">
           <h1>LOG IN</h1>
+          <div>{ error }</div>
           <form className="form_CN" onSubmit={submitHandler}>
             <input
               name="name"
