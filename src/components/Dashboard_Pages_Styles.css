@@ -1,0 +1,44 @@
+.Dashboard_Frame {
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(236, 62, 39);
+}
+
+.Dashboard_Menu {
+    background-color: rgb(228, 228, 228);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 80vh;
+}
+
+.Dashboard_Menu li {
+    list-style: none;
+    padding: 10px;
+}
+
+.Dashboard_Menu li a {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.Menu_Frame {
+    display: none;
+}
+.myAccount:focus + .Menu_Frame {
+    background-color: rgb(0, 228, 11);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+}
+/* .Display_Menu_OnClick {
+    
+} */

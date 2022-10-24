@@ -6,7 +6,7 @@ import Dashboard_Page from '../components/Dashboard_Page';
 const Dashboard = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Dashboard_Page />
     </div>
   )
