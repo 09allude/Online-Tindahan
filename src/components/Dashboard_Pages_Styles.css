@@ -29,7 +29,7 @@
 .Menu_Frame {
     display: none;
 }
-.myAccount:focus + .Menu_Frame {
+/* .myAccount:focus + .Menu_Frame {
     background-color: rgb(0, 228, 11);
 
     display: flex;
@@ -38,7 +38,7 @@
     flex-direction: column;
     width: 80%;
     height: 80vh;
-}
+} */
 /* .Display_Menu_OnClick {
     
 } */

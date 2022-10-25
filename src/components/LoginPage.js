@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../components/LoginPage.css";
 
-import Logo from "../assets/grad_pic_3.png";
+import Logo from "../assets/grad_pic_3.jpg";
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
