@@ -3,6 +3,10 @@ import "../components/LoginPage.css";
 
 import Logo from "../assets/grad_pic_3.jpg";
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import NavBar_LogIn from './NavBar_LogIn';
+
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -37,6 +41,8 @@ const LoginPage = () => {
   return (
     <div className="LogIn_Mainframe">
       
+      <NavBar_LogIn />
+
       <div className="Login_Form">
         <img src={Logo} className="Logo" alt="logo" />
         <div className="Login_Form_Data">
@@ -68,9 +74,15 @@ const LoginPage = () => {
               value={details.password}
             />
             <button>Log In</button>
+            
+            <Link>Forgot Password?</Link>
+          
           </form>
         </div>
       </div>
+
+      <Footer />
+
     </div>
   )
 }

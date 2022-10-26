@@ -1,0 +1,30 @@
+.Footer_MainFrame {
+    height: 28vh;
+    width: 100%;
+
+    background-color: rgb(228, 228, 228);
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.customerService_Footer {
+    padding: 5px;
+}
+
+.aboutOT_Footer {
+    padding: 5rem;
+}
+
+.payment_Footer {
+    padding: 5rem;
+}
+
+.followUs_Footer {
+    padding: 5rem;
+}
+
+.appDL_Footer {
+    padding: 5rem;
+}

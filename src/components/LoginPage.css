@@ -13,8 +13,10 @@
 }
 
 .Login_Form {
-    border: 5px solid white;
+    border: 5px solid rgb(107, 137, 235);
     display: flex;
+    padding-top: 10rem;
+    padding-left: 5rem;
 }
 .Login_Form_Data {
     border: 5px solid red;
