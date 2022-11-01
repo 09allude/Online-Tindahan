@@ -3,8 +3,6 @@ import "../components/LoginPage.css";
 
 import Logo from "../assets/grad_pic_3.jpg";
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
-import NavBar_LogIn from './NavBar_LogIn';
 
 import { Link } from 'react-router-dom';
 
@@ -41,7 +39,10 @@ const LoginPage = () => {
   return (
     <div className="LogIn_Mainframe">
       
-      <NavBar_LogIn />
+      <div className="flex justify-around items-center p-10">
+        <h1>ONLINE TINDAHAN</h1>
+        <h2>Need Help?</h2>
+      </div>
 
       <div className="Login_Form">
         <img src={Logo} className="Logo" alt="logo" />
@@ -81,7 +82,7 @@ const LoginPage = () => {
         </div>
       </div>
 
-      <Footer />
+
 
     </div>
   )
