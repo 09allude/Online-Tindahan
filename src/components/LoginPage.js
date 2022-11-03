@@ -39,12 +39,16 @@ const LoginPage = () => {
   return (
     <div className="LogIn_Mainframe">
       
-      <div className="flex justify-around items-center p-10">
-        <h1>ONLINE TINDAHAN</h1>
-        <h2>Need Help?</h2>
+      <div className="flex items-center justify-around p-6">
+        <div>
+          <h1>ONLINE TINDAHAN</h1>
+        </div>
+        <div className="pl-xxl">
+          <h2>Need Help?</h2>
+        </div>
       </div>
 
-      <div className="Login_Form">
+      <div className="flex justify-center items-center bg-LogIn_Frame pt-20 pr-72 border-solid border-2 border-red-600">
         <img src={Logo} className="Logo" alt="logo" />
         <div className="Login_Form_Data">
           <h1>LOG IN</h1>
@@ -74,7 +78,7 @@ const LoginPage = () => {
               onChange={ e=> setDetails({ ...details, password: e.target.value }) }
               value={details.password}
             />
-            <button>Log In</button>
+            <button className="bg-emerald-400 hover:bg-emerald-500">Log In</button>
             
             <Link>Forgot Password?</Link>
           

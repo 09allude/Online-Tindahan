@@ -2,7 +2,15 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      padding: {
+        xxl: '65rem' //FOR LOGIN PAGE NAV_BAR
+      },
+      backgroundColor: {
+        'LogIn_Frame': '#baffb8',
+        'main-bg_btn': '#20232A' //FOR LOGIN BUTTON ONLY?
+      }
+    },
   },
   plugins: [],
 }
