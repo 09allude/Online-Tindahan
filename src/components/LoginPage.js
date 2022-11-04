@@ -51,8 +51,14 @@ const LoginPage = () => {
       <div className="flex justify-center items-center bg-LogIn_Frame pt-20 pr-72 border-solid border-2 border-red-600">
         <img src={Logo} className="Logo" alt="logo" />
         <div className="Login_Form_Data">
+
+          {/* { details.email !== adminUser.email && details.password !== adminUser.password (<>
+            <div>{ error }</div>
+          </>) } */}
+
+          <div className="p-5 rounded-md animate-bounce underline underline-offset-8">{ error }</div>
+
           <h1>LOG IN</h1>
-          <div>{ error }</div>
           <form className="form_CN" onSubmit={submitHandler}>
             <input
               name="name"
@@ -78,7 +84,7 @@ const LoginPage = () => {
               onChange={ e=> setDetails({ ...details, password: e.target.value }) }
               value={details.password}
             />
-            <button className="bg-emerald-400 hover:bg-emerald-500">Log In</button>
+            <button className="bg-emerald-400 hover:bg-emerald-500 rounded-md p-2">Log In</button>
             
             <Link>Forgot Password?</Link>
           
