@@ -4,12 +4,27 @@ module.exports = {
   theme: {
     extend: {
       padding: {
-        xxl: '65rem' //FOR LOGIN PAGE NAV_BAR
+        xxl: '65rem', //FOR LOGIN PAGE NAV_BAR
+        width: '30%',
+        height: '80vh',
       },
       backgroundColor: {
         'LogIn_Frame': '#baffb8',
-        'main-bg_btn': '#20232A' //FOR LOGIN BUTTON ONLY?
+        'main-bg': 'rgb(236, 62, 39)' //FOR UNIVERSAL USAGE
+      },
+
+      link_underline: {
+        'border-bottom-width': '0',
+        'background-image': 'linear-gradient(transparent, transparent), linear-gradient(#fff, #fff)',
+        'background-size': '0 3px',
+        'background-position': '0 100%',
+        'background-repeat': 'no-repeat',
+        'transition': 'background-size .5s ease-in-out',
+      },
+      link_underline_black: {
+        'background-image': 'linear-gradient(transparent, transparent), linear-gradient(#F2C, #F2C)',
       }
+
     },
   },
   plugins: [],

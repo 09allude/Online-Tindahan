@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
+
+  const [ isActive, setActive ] = useState(false);
+
   const navigate = useNavigate();
   const adminUser = {
     email: "admin@admin.com",
@@ -32,6 +35,10 @@ const LoginPage = () => {
     } else {
       console.log("Details do not match!")
       setError("Details do not match!!")
+      setActive(true);
+      // return (
+      //   <div className="p-5 rounded-md animate-bounce underline underline-offset-8 transition duration-150 ease-in-out">{ error }</div>
+      // )
     }
   }
 
@@ -56,8 +63,7 @@ const LoginPage = () => {
             <div>{ error }</div>
           </>) } */}
 
-          <div className="p-5 rounded-md animate-bounce underline underline-offset-8">{ error }</div>
-
+          {/* link_underline link_underline_black */}
           <h1>LOG IN</h1>
           <form className="form_CN" onSubmit={submitHandler}>
             <input
@@ -84,6 +90,9 @@ const LoginPage = () => {
               onChange={ e=> setDetails({ ...details, password: e.target.value }) }
               value={details.password}
             />
+            <div className={isActive ? 'block' : 'hidden'}>
+              <div className="p-5 rounded-md animate-bounce underline underline-offset-8 transition duration-150 ease-in-out">{ error }</div>
+            </div>
             <button className="bg-emerald-400 hover:bg-emerald-500 rounded-md p-2">Log In</button>
             
             <Link>Forgot Password?</Link>

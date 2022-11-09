@@ -14,7 +14,7 @@ class testing extends Component{
                 }} >Click Me!</button>
               </div>
         
-              {/* { this.state.visible ? <div> <Dashboard_User /> <div/> : null } */}
+              {/* { this.state.visible ? <div> <MyAccount /> <div/> : null } */}
         
             </div>
         )
