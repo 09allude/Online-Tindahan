@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../components/Dashboard_Pages_Styles.css";
-// import myaccount from './Dashboard_MenuPages/myAccount';
-import My_Purchase from './Dashboard_MenuPages/My_Purchase';
+import myAccount from './Dashboard_MenuPages/myAccount';
 
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -12,22 +11,10 @@ export class Dashboard_Page extends Component {
    super (props);
    console.log("props from dashboard : ", this.props.sample);
     this.state = {
-      screen:  this.props.sample,
-      myPurchase: false,
-    
+      screen: this.props.sample,
+      // myPurchase: false,
     };
   }
-
-  // if(selected === userAccount ) {
-  //   this.setState({ userAccount: true })
-  // }
-
-  // onClick() {
-  //   let navigate = useNavigate()
-  //   console.log("asddfsdf");
-  //   navigate("/myAccount");
-  //   return <myAccount />
-  // }
 
 render () {
 
@@ -37,29 +24,21 @@ render () {
       <div className="Dashboard_Menu">
 
         <ul>
-          {/* <li>
-            <Link className="myAccount" onClick={this.onClick}>My Account</Link>
-          </li> */}
+          {/* My_Account = 1st screen onClick Login */}
           <li>
-              <Link className={this.state.screen == "myaccount" ? 'text-red-500' : 'text-slate-500' && 'p-2'}  to="/myAccount">My Account</Link>
+              <Link className={ this.state.screen == "myAccount" ? 'text-red-500' : 'text-slate-500' } to="/myAccount" >My Account</Link>
           </li>
           <li>
-            <Link>My Purchase</Link> 
+            <Link className={ this.state.screen == "myPurchase" ? 'text-red-500' : 'text-slate-500' } to="/myPurchase" >My Purchase</Link> 
           </li>
           <li>
-            <Link>Notifications</Link>
+            <Link className={ this.state.screen == "notification" ? 'text-red-500' : 'text-slate-500' } to="/notification" >Notifications</Link>
           </li>
           <li>
-            <Link>My Vouchers</Link>
+            <Link className={ this.state.screen == "myVoucher" ? 'text-red-500' : 'text-slate-500' } to="/myVoucher" >My Vouchers</Link>
           </li>
         </ul>
       </div>
-
-      {/* <div id="Menu_Frame" className="Menu_Frame">
-        <MyAccount />
-      </div> */}
-
-      {/* { this.state.visible ? <div> <MyAccount /> <div/> : null } */}
 
     </div>
   )

@@ -1,17 +1,22 @@
 import React from 'react';
 
-
 import NavBar from '../NavBar';
 import DashboardSideBar from '../Dashboard_SideBar';
-const  MyAccount = () => {
-  
+const myAccount = () => {
   return (
-    <div>
+    <div className="flex">
       <NavBar />
-      <DashboardSideBar sample={'myaccount'} />
-    
+      {/* className="flex justify-center items-center content-center border-solid border-2 border-red-600" */}
+      <div>
+        <DashboardSideBar sample={'myAccount'} />
+        
+        <div>
+          <h1>My Account</h1>
+        </div>
+      </div>
+
     </div>
   )
 }
 
-export default MyAccount
+export default myAccount
