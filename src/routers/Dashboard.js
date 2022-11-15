@@ -7,7 +7,7 @@ import MyAccount from '../components/Dashboard_MenuPages/myAccount';
 const Dashboard = () => {
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <DashboardSideBar sample={true} /> */}
       <MyAccount sample={true}/>
     </div>
