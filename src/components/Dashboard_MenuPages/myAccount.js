@@ -6,12 +6,13 @@ const myAccount = () => {
   return (
     <div className="flex">
       <NavBar />
-      {/* className="flex justify-center items-center content-center border-solid border-2 border-red-600" */}
-      <div>
+      <div className="flex items-center w-full border-solid border-2 border-red-600">
         <DashboardSideBar sample={'myAccount'} />
         
-        <div>
-          <h1>My Account</h1>
+        <div className="border-solid border-2 border-red-600">
+          <div>
+            <h1>My Account</h1>
+          </div>
         </div>
       </div>
 

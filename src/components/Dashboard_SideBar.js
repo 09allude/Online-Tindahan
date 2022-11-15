@@ -1,45 +1,43 @@
 import React, { Component } from 'react';
 import "../components/Dashboard_Pages_Styles.css";
-import myAccount from './Dashboard_MenuPages/myAccount';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class Dashboard_Page extends Component {
-// selected var = navigate
 
   constructor(props) {
    super (props);
    console.log("props from dashboard : ", this.props.sample);
     this.state = {
       screen: this.props.sample,
-      // myPurchase: false,
     };
   }
 
+
+
 render () {
 
-
   return (
-    <div className="Dashboard_Frame">
-      <div className="Dashboard_Menu">
-
-        <ul>
+    // <div className="Dashboard_Frame">
+    //   <div className="Dashboard_Menu">
+    <div className="border-solid border-2 border-blue-600 h-screen bg-gray-200">
+      <div className="border-solid border-2 border-green-600 bg-gray-200 flex w-9/12 h-screen p-20 pr-0 justify-center items-center">
+        <ul className="border-solid border-2 border-green-600 w-48 flex flex-col items-center">
           {/* My_Account = 1st screen onClick Login */}
-          <li>
-              <Link className={ this.state.screen == "myAccount" ? 'text-red-500' : 'text-slate-500' } to="/myAccount" >My Account</Link>
+          <li className="list-none pt-10">
+            <Link className={ this.state.screen === "myAccount" ? 'bg-sky-400 rounded-md p-2' : 'text-slate-500 hover:text-red-600' } to="/myAccount" >My Account</Link>
           </li>
-          <li>
-            <Link className={ this.state.screen == "myPurchase" ? 'text-red-500' : 'text-slate-500' } to="/myPurchase" >My Purchase</Link> 
+          <li className="list-none pt-10">
+            <Link className={ this.state.screen === "myPurchase" ? 'bg-sky-400 rounded-md p-2' : 'text-slate-500 hover:text-red-600' } to="/myPurchase" >My Purchase</Link> 
           </li>
-          <li>
-            <Link className={ this.state.screen == "notification" ? 'text-red-500' : 'text-slate-500' } to="/notification" >Notifications</Link>
+          <li className="list-none pt-10">
+            <Link className={ this.state.screen === "notification" ? 'bg-sky-400 rounded-md p-2' : 'text-slate-500 hover:text-red-600' } to="/notification" >Notifications</Link>
           </li>
-          <li>
-            <Link className={ this.state.screen == "myVoucher" ? 'text-red-500' : 'text-slate-500' } to="/myVoucher" >My Vouchers</Link>
+          <li className="list-none pt-10">
+            <Link className={ this.state.screen === "myVoucher" ? 'bg-sky-400 rounded-md p-2' : 'text-slate-500 hover:text-red-600' } to="/myVoucher" >My Vouchers</Link>
           </li>
         </ul>
       </div>
-
     </div>
   )
 }
