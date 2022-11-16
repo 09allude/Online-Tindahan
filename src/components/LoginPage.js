@@ -31,7 +31,9 @@ const LoginPage = () => {
           email: details.email
         });
       
-      navigate("/dashboard");
+      navigate("/dashboard", {details});
+      // setDetails({ ...details, name: e.target.value })
+      // setState= details
     } else {
       console.log("Details do not match!")
       setError("Details do not match!!")
@@ -73,6 +75,7 @@ const LoginPage = () => {
               placeholder="Username"
               onChange={ e => setDetails({ ...details, name: e.target.value }) }
               value={details.name}
+              state={{ details: details }}
             />
             <input
               id="email"
