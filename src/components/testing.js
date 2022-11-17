@@ -1,24 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-class testing extends Component{
-    state = {
-        visible: true
-    }
-    
-    render() {
-        return (
-            <div className="Dashboard_Frame">
-              <div className="Dashboard_Menu">
-                <button onClick={() => {
-                  this.setState({ visible: false })
-                }} >Click Me!</button>
-              </div>
-        
-              {/* { this.state.visible ? <div> <MyAccount /> <div/> : null } */}
-        
-            </div>
-        )
-    }
+export class testing extends Component {
+
+  constructor(props) {
+    super (props);
+
+    this.state = {  }
+  }
+
+  render() {
+    return (
+      <div>testing</div>
+    )
+  }
 }
 
-export default testing
+export default testing;
